@@ -1,0 +1,26 @@
+@import '../../style/variables.scss';
+@import '../../style/tools/_flex.scss';
+
+.header {
+  background-color: $base-color;
+  height: $font*3;
+  color: white;
+  padding: nth($d, 1) nth($d, 3);
+  @extend %flex-row;
+  .header_back {
+    @extend %flex-row;
+    width: 10.5%;
+    i {
+      font-size: $font*2;
+      margin-top: 2px;
+    }
+  }
+  .header_title {
+    @include flex(1);
+    text-align: center;
+  }
+  .header_right {
+    width: 10.5%;
+    text-align: right;
+  }
+}

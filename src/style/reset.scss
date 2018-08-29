@@ -1,0 +1,214 @@
+@import "./variables.scss";
+/* stylelint-disable */
+html,
+body {
+  font-size: 12px;
+}
+/* reset begin  */
+
+@media screen and (min-width: 436px) and (max-width: 1024px),
+screen and (min-device-width: 436px) and (max-device-width: 1024px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 435px),
+only screen and (max-device-width: 435px) {
+  html,
+  body {
+    font-size: 16.3125px;
+  }
+}
+
+@media only screen and (max-width: 414px),
+only screen and (max-device-width: 414px) {
+  html,
+  body {
+    font-size: 15.525px;
+  }
+}
+
+@media only screen and (max-width: 400px),
+only screen and (max-device-width: 400px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 384px),
+only screen and (max-device-width: 384px) {
+  html,
+  body {
+    font-size: 14.4px;
+  }
+}
+
+@media only screen and (max-width: 375px),
+only screen and (max-device-width: 375px) {
+  html,
+  body {
+    font-size: 14.0625px;
+  }
+}
+
+@media only screen and (max-width: 360px),
+only screen and (max-device-width: 360px) {
+  html,
+  body {
+    font-size: 13.5px;
+  }
+}
+
+@media only screen and (max-width: 320px),
+only screen and (max-device-width: 320px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 240px),
+only screen and (max-device-width: 240px) {
+  html,
+  body {
+    font-size: 9px;
+  }
+}
+
+html {
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	width: 100%;
+}
+
+body {
+  overflow: hidden;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+	font-family: 'arial','sans-serif';
+	color: #363636;
+}
+
+/* 清除内外边距 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+/* structural elements 结构元素 */
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+/* list elements 列表元素 */
+pre,
+/* text formatting elements 文本格式元素 */
+fieldset,
+lengend,
+button,
+input,
+textarea,
+/* form elements 表单元素 */
+th,
+td {
+  /* table elements 表格元素 */
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+ul,
+ol,
+li {
+  list-style-position: inside;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $gray;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none !important;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="text"], input[type="tel"] {
+-webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+/*横条样式*/
+input[type=range] {
+  -webkit-appearance: none; /*清除系统默认样式*!*/
+  width: 100%;
+  /*background: -webkit-linear-gradient(#61bd12, #61bd12) no-repeat, #ddd; !*设置左边颜色为#61bd12，右边颜色为#ddd*!*/
+  background-size: 0% 100%; /*设置左右宽度比例*/
+  height: 3px; /*横条的高度*/
+}
+
+/*拖动块的样式*/
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; /*清除系统默认样式*/
+  height: 20px; /*拖动块高度*/
+  width: 20px; /*拖动块宽度*/
+  background: #e9203d; /*拖动块背景*/
+  border-radius: 50%; /*外观设置为圆形*/
+}
+
+textarea {  -webkit-appearance: none;}
+
+input:focus,
+button:focus {
+  outline: 0;
+}
+
+.formBox{
+  input[type="text"], input[type="tel"], input[type="number"] {
+    border-radius: .3rem;
+    display: block;
+    width: 100%;
+    height: 2.333rem;
+    padding: 0 1rem;
+		box-sizing: border-box;
+		border: 1px solid $gray-light;
+  }
+	select {
+		height: 2.5rem;
+		background-color: transparent;
+		border: none;
+		border: 1px solid $gray-light;
+	}
+}
+
+.mainlayout {
+	width: 90%;
+	margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+}

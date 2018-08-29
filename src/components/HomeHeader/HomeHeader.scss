@@ -1,0 +1,51 @@
+@import "../../style/variables.scss";
+@import "../../style/tools/_flex.scss";
+
+.header {
+  background: $base-color;
+  height: $font*3;
+  color: white;
+  padding: nth($d, 1) nth($d, 3);
+  @extend %flex-row;
+  .cityName {
+    padding-left: nth($d, 1);
+    a {
+      @extend %flex-row;
+    }
+  }
+  .searchBar {
+    @include flex(1);
+    padding: 0 $font/2;
+    .searchInput {
+      @extend %flex-row;
+      border-radius: $font;
+      background: white;
+      padding: 0 14px 0 12px;
+      overflow: hidden;
+      .inputSearch {
+        height: 32px;
+        padding-left: 5px;
+      }
+      i {
+        color: #888;
+        font-size: $font*1.2;
+        &:last-child {
+          padding-bottom: 3px;
+        }
+      }
+    }
+  }
+  .musicIcon {
+    text-align: right;
+    padding-right: nth($d, 1);
+    .musicIconAnimate {
+      span {
+        display: inline-block;
+        width: 2px;
+        //height: 1.2rem;
+        margin: 0 2px;
+        background: white;
+      }
+    }
+  }
+}

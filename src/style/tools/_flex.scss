@@ -1,0 +1,70 @@
+@mixin flexBox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex: $values;
+  -webkit-flex: $values;
+  -ms-flex: $values;
+  flex: $values;
+}
+
+// flex-direction属性决定主轴的方向（即项目的排列方向）。
+@mixin flexDirection($direction) {
+  @if $direction == row {
+    -webkit-box-orient: horizontal;  //规定框的子元素应该被水平或垂直排列 horizontal	在水平行中从左向右排列子元素  vertical	从上向下垂直排列子元素。
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  } @else if $direction == column {
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+//flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap
+//flex-wrap属性项目都排在一条线（又称”轴线”）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。wrap：换行，第一行在上方。wrap-reverse：换行，第一行在下方。
+@mixin flex-flow($dir, $wrap) {
+  -moz-flex-flow: $dir $wrap;
+  -webkit-flex-flow: $dir $wrap;
+  flex-flow: $dir $wrap;
+}
+
+//justify-content属性定义了项目在主轴上的对齐方式
+@mixin justify-content($mode) {
+  -webkit-box-pack: $mode; //该属性规定水平框中的水平位置，以及垂直框中的垂直位置。
+  -webkit-justify-content: $mode;
+  justify-content: $mode;
+}
+
+// align-items属性定义项目在交叉轴上如何对齐。
+@mixin align-items($mode) {
+  -webkit-box-align: $mode;
+  -webkit-align-items: $mode;
+  align-items: $mode;
+}
+
+//align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
+@mixin align-content($mode) {
+  -webkit-align-content: $mode;
+  align-content: $mode;
+}
+
+//align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。
+@mixin align-self($mode) {
+  -webkit-align-self: $mode;
+  align-self: $mode;
+}
+
+//order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -webkit-order: $val;
+  order: $val;
+}

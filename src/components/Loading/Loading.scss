@@ -1,0 +1,27 @@
+@import '../../style/variables.scss';
+@import '../../style/tools/_flex.scss';
+@import '../../style/tools/_tool.scss';
+
+.loading {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  @include flexBox;
+  @include justify-content(center);
+  @include align-items(center);
+  @include flexDirection(row);
+
+  i {
+    font-size: $font*3;
+    color: #888;
+    @include animation(rotate-the-object 1.4s infinite linear);
+    @include keyframes(rotate-the-object) {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
